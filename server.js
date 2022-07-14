@@ -27,9 +27,34 @@ app.get('/', (req, res) => {
   })
 })
 
-db.query(`SELECT * FROM candidates`, (err, rows) => {
-  console.log(rows)
-})
+// db.query(`SELECT * FROM candidates`, (err, rows) => {
+//   console.log(rows)
+// })
+
+// db.query(`SELECT * FROM candidates where id =1 `, (err, row) => {
+//   if (err) {
+//     console.log(err)
+//   } else {
+//     console.log(row)
+//   }
+// })
+
+// db.query(`DELETE FROM candidates WHERE id = ?`, 1, (err, result) => {
+//   if (err) {
+//     console.log(err)
+//   }
+//   console.log(result)
+// })
+
+// const sql = `INSERT INTO candidates (id, first_name, last_name, industry_connected)
+// VALUES (?,?,?,?)`
+// const params = [1, 'Ronald', 'Firbank', 1]
+// db.query(sql, params, (err, result) => {
+//   if (err) {
+//     console.log(err)
+//   }
+//   console.log(result)
+// })
 
 //Default response for any other request (Not Found)
 //Because this is a catchall route, its placement is very important. What happens to the GET test route if we place this route above it?This route will override all others—so make sure that this is the last one.
